@@ -78,7 +78,6 @@ public class HomeController {
 			//companiesList = service2.getIRMLAzyList(obj, 0, 10, email);
 			user.setUser_id(userId);
 			user.setRole(role);
-			List<User> rewardsList = service.getRewardsHistory(user);
 			if(role.equals("Admin") || role.equals("Monitor")) {
 				 model = new ModelAndView(PageConstants.dashboardAdmin);
 			}else if(role.equals("User")) {
