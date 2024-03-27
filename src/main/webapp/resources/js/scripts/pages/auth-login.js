@@ -33,6 +33,12 @@ $(function () {
         },
         'login-password': {
           required: true
+        },
+        'password': {
+          required: true
+        },
+        'user_id': {
+          required: true
         }
       }
     });

@@ -443,20 +443,19 @@ public class UserDao {
 		User userDetails = null;
 		try{  
 			con = dataSource.getConnection();
-			String qry = "select up.id,up.user_id,up.user_name,up.base_role,up.contact_number,up.email_id,up.base_department,department_name,up.base_sbu,up.base_project,"
-					+ "up.reward_points,p.project_name,s.sbu_name,up.reporting_to,up1.user_name as reporting_user_name,up.version_no from [user_profile] up "
-					+ "LEFT JOIN project p on up.base_project = p.project_code  "
-					+ "LEFT JOIN sbu s on up.base_sbu = s.sbu_code  "
-					+ "LEFT JOIN [department] d on up.base_department = d.department_code  "
-					+ "LEFT JOIN user_accounts ua on up.user_id = ua.user_id  "
-					+ "LEFT JOIN user_profile up1 on up.reporting_to = up1.user_id  "
-					+ "where  up.user_name <> '' and ua.status = 'Active' and (Format( CURRENT_TIMESTAMP,'yyyy-MM-dd') <= up.end_date or up.end_date is null) ";
-			if(!StringUtils.isEmpty(user.getEmail_id())){
-				qry = qry + "AND up.email_id = ? "; 
+			String qry = "select up.id,up.user_id,up.user_name,up.password,up.base_role,up.phone,up.email_id,up.department_code"
+					+ ",up.sbu_code,up1.user_name as modified_by,up0.user_name as created_by,"
+					+ "FORMAT	(up.created_date, 'dd-MMM-yy') as created_date,FORMAT	(up.modified_date, 'dd-MMM-yy') as modified_date from [user_profile] up "
+					+ "LEFT JOIN user_profile up0 on up.created_by = up0.user_id  "
+					+ "LEFT JOIN user_profile up1 on up.modified_by = up1.user_id  "
+					+ "where  up.user_name <> '' and up.status = 'Active'  ";
+			if(!StringUtils.isEmpty(user.getUser_id()) && !StringUtils.isEmpty(user.getPassword())){
+				qry = qry + "AND up.user_id = ? and up.password = ?  "; 
 			}
 			stmt = con.prepareStatement(qry);
-			if(!StringUtils.isEmpty(user.getEmail_id())){
-				stmt.setString(1, user.getEmail_id());;
+			if(!StringUtils.isEmpty(user.getUser_id()) && !StringUtils.isEmpty(user.getPassword())){
+				stmt.setString(1, user.getUser_id());;
+				stmt.setString(2, user.getPassword());;
 			}
 			rs = stmt.executeQuery();  
 			if(rs.next()) {
@@ -465,27 +464,13 @@ public class UserDao {
 				userDetails.setUser_id(rs.getString("user_id"));
 				userDetails.setUser_name(rs.getString("user_name"));
 				userDetails.setEmail_id(rs.getString("email_id"));
-				userDetails.setContact_number(rs.getString("contact_number"));
-				userDetails.setReporting_to(rs.getString("reporting_to"));
+				userDetails.setPhone(rs.getString("phone"));
 				userDetails.setBase_role(rs.getString("base_role"));
-				userDetails.setBase_sbu(rs.getString("base_sbu"));
-				userDetails.setBase_project(rs.getString("base_project"));
-				userDetails.setProject_name(rs.getString("project_name"));
-				userDetails.setSbu_name(rs.getString("sbu_name"));
-				userDetails.setBase_department(rs.getString("base_department"));
-				userDetails.setDepartment_name(rs.getString("department_name"));
-				userDetails.setReward_points(rs.getString("reward_points"));
-				userDetails.setReporting_user_name(rs.getString("reporting_user_name"));
-				userDetails.setVersion_no(rs.getString("version_no"));
-				userDetails.setUser_session_id(user.getUser_session_id());
-				userDetails.setDevice_type(user.getDevice_type());
-				userDetails.setDevice_type_no(user.getDevice_type_no());
-				//int session_count = checkUserLoginDetails(userDetails);
-				//userDetails.setSession_count(session_count);
-				boolean flag =  setLastLoginTime(userDetails);
-				UserLoginActions(userDetails);
+				userDetails.setBase_sbu(rs.getString("sbu_code"));
+				userDetails.setBase_department(rs.getString("department_code"));
 			}
 		}catch(Exception e){ 
+			e.printStackTrace();
 			throw new SQLException(e.getMessage());
 		}finally {
 			DBConnectionHandler.closeJDBCResoucrs(con, stmt, rs);

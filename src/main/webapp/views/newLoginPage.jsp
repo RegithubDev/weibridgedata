@@ -61,16 +61,16 @@
 
         <h4 class="card-title mb-1">Welcome</h4>
 
-        <form class="auth-login-form mt-2" action="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/html/ltr/horizontal-menu-template/index.html" method="POST">
+        <form class="auth-login-form mt-2" action="<%=request.getContextPath() %>/sign-in" method="POST">
           <div class="mb-1">
-            <label for="login-email" class="form-label">Email</label>
+            <label for="login-email" class="form-label">user Id</label>
             <input
               type="text"
               class="form-control"
-              id="login-email"
-              name="login-email"
-              placeholder="john@example.com"
-              aria-describedby="login-email"
+              id="user_id"
+              name="user_id"
+              placeholder="User Id"
+              aria-describedby="user_id"
               tabindex="1"
               autofocus
             />
@@ -87,11 +87,11 @@
               <input
                 type="password"
                 class="form-control form-control-merge"
-                id="login-password"
-                name="login-password"
+                id="password"
+                name="password"
                 tabindex="2"
                 placeholder="Password"
-                aria-describedby="login-password"
+                aria-describedby="password"
               />
               <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
             </div>

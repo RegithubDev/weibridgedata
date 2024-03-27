@@ -48,13 +48,13 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter{
 			requestURI = request.getRequestURI();
 			UrlGenerator ugObj = new UrlGenerator();
 			context_path = ugObj.getContextPath();
-			if(requestURI.equals("/"+context_path+"/add-new-user") &&  !requestURI.equals("/"+context_path+"/login")) {
+			if(requestURI.equals("/"+context_path+"/add-new-user") &&  !requestURI.equals("/"+context_path+"/sign-in")) {
 				
 				 return true;
 			}
 			if(!request.getRequestURI().contains("@")){
-			if( !requestURI.equals("/"+context_path+"/") && !requestURI.equals("/"+context_path+"/login") 
-					&& !requestURI.equals("/") && !requestURI.equals("/login") && !requestURI.equals("/"+context_path+"/logout")){
+			if( !requestURI.equals("/"+context_path+"/") && !requestURI.equals("/"+context_path+"/sign-in") 
+					&& !requestURI.equals("/") && !requestURI.equals("/sign-in") && !requestURI.equals("/"+context_path+"/logout")){
 				 User userData = (User) request.getSession().getAttribute("user");
 				 int session_count = 0;
 				 try {
@@ -66,10 +66,10 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter{
 				 	      
 					    	if(request.getRequestURI().contains("/"+context_path+"/")){
 					    	//	request.getSession().invalidate();
-					    		response.sendRedirect("/"+context_path+"/login/{email_id}");
+					    		response.sendRedirect("/"+context_path+"/sign-in/{email_id}");
 					    		return true;
 					    	}else{
-					    		response.sendRedirect("/login");
+					    		response.sendRedirect("/sign-in");
 					    	}
 					    }
 				 	
@@ -98,7 +98,7 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter{
 							// session_count =  checkUserLoginDetails(userData);
 							 if(session_count > 1) {
 								 request.getSession().invalidate();
-								 response.sendRedirect("/"+context_path+"/login");
+								 response.sendRedirect("/"+context_path+"/sign-in");
 							 }else {
 								 response.sendRedirect("/"+context_path+"/home");
 							 }
