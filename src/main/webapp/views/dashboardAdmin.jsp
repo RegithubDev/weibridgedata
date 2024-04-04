@@ -2,18 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
-<!--
-Template Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
-Author: PixInvent
-Website: http://www.pixinvent.com/
-Contact: hello@pixinvent.com
-Follow: www.twitter.com/pixinvents
-Like: www.facebook.com/pixinvents
-Purchase: https://1.envato.market/vuexy_admin
-Renew Support: https://1.envato.market/vuexy_admin
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
 
--->
 <html class="loading" lang="en" data-textdirection="ltr">
   <!-- BEGIN: Head-->
   
@@ -122,8 +111,9 @@ License: You must have a valid license purchased only from themeforest(the above
     </div>    <!-- END: Main Menu-->
 
     <!-- BEGIN: Content-->
-    <div class="app-content content ">
-      <div class="content-overlay"></div>
+<div class="app-content content " style="
+    top: -4rem;
+">      <div class="content-overlay"></div>
       <div class="header-navbar-shadow"></div>
       <div class="content-wrapper container-xxl p-0">
       <!--   <div class="content-header row">
@@ -137,21 +127,178 @@ License: You must have a valid license purchased only from themeforest(the above
             </div>
           </div>
         </div> -->
+        
+        
+        <div class="content-header row">
+          <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+              <div class="col-12">
+                <h2 class="content-header-title float-start mb-0">IWM</h2>
+                <div class="breadcrumb-wrapper">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index-2.html">IWM</a>
+                    </li>
+                   
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
+            <div class="mb-1 breadcrumb-right">
+              <div class="dropdown">
+<button
+												class="dt-button buttons-collection btn btn-outline-secondary dropdown-toggle me-2"
+												tabindex="0" aria-controls="DataTables_Table_0"
+												type="button" aria-haspopup="true">
+												<span><svg xmlns="http://www.w3.org/2000/svg"
+														width="24" height="24" viewBox="0 0 24 24" fill="none"
+														stroke="currentColor" stroke-width="2"
+														stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-share font-small-4 me-50">
+														<path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+														<polyline points="16 6 12 2 8 6"></polyline>
+														<line x1="12" y1="2" x2="12" y2="15"></line></svg>Export</span>
+											</button>                <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="app-todo.html"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square me-1"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg><span class="align-middle">Todo</span></a><a class="dropdown-item" href="app-chat.html"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square me-1"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg><span class="align-middle">Chat</span></a><a class="dropdown-item" href="app-email.html"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail me-1"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><span class="align-middle">Email</span></a><a class="dropdown-item" href="app-calendar.html"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar me-1"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg><span class="align-middle">Calendar</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
        <section id="basic-datatable">
   <div class="row">
     <div class="col-12">
       <div class="card">
-        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer"><div class="card-header border-bottom p-1"><div class="head-label"><h6 class="mb-0">DataTable with Buttons</h6></div><div class="dt-action-buttons text-end"><div class="dt-buttons d-inline-flex"> <button class="dt-button buttons-collection btn btn-outline-secondary dropdown-toggle me-2" tabindex="0" aria-controls="DataTables_Table_0" type="button" aria-haspopup="true"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share font-small-4 me-50"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>Export</span></button> <button type="button" class="btn btn-outline-primary waves-effect">
-              
-              
-              
-<input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
-              
-            </button> </div></div></div><div class="d-flex justify-content-between align-items-center mx-0 row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="DataTables_Table_0_length"><label>Show <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="form-select"><option value="7">7</option><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="75">75</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control" placeholder="" aria-controls="DataTables_Table_0"></label></div></div></div><table class="datatables-basic table dataTable no-footer dtr-column" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info" style="width: 1298px;">
-          <thead>
-            <tr role="row"><th class="control sorting_disabled" rowspan="1" colspan="1" style="width: 41px; display: none;" aria-label=""></th><th class="sorting_disabled dt-checkboxes-cell dt-checkboxes-select-all" rowspan="1" colspan="1" style="width: 41px;" data-col="1" aria-label=""><div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="checkboxSelectAll"><label class="form-check-label" for="checkboxSelectAll"></label></div></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 128px;" aria-label="Name: activate to sort column ascending">Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 132px;" aria-label="Email: activate to sort column ascending">Email</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 119px;" aria-label="Date: activate to sort column ascending">Date</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 152px;" aria-label="Salary: activate to sort column ascending">Salary</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 147px;" aria-label="Status: activate to sort column ascending">Status</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 157px;" aria-label="Actions">Actions</th></tr>
-          </thead>
-        <tbody><tr class="odd"><td valign="top" colspan="7" class="dataTables_empty">Loading...</td></tr></tbody></table><div class="d-flex justify-content-between mx-0 row"><div class="col-sm-12 col-md-6"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div></div><div class="col-sm-12 col-md-6"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">&nbsp;</a></li><li class="paginate_button page-item next disabled" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">&nbsp;</a></li></ul></div></div></div></div>
+        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+								<div class="col-md-12">
+      <div class="card">
+        
+        <div class="card-body">
+          <div class="row">
+            <div class="col-xl-2 col-md-6 col-8">
+              <div class="mb-1">
+                <label class="form-label" for="basicInput">Customer</label>
+														<div class="position-relative" >
+															<select
+																class="select2-size-lg form-select select2-hidden-accessible"
+																id="customer" >
+																<option value="text">Select Customer</option>
+
+															</select>
+														</div>
+													</div>
+            </div>
+           
+            
+            <!--   <div class="col-xl-2 col-md-6 col-8">
+              <div class="mb-1">
+                <label class="form-label" for="basicInput">IWMA NO</label>
+														<div class="position-relative" >
+															<select
+																class="select2-size-lg form-select select2-hidden-accessible"
+																id="iwma_no" >
+																<option value="text">Select IWMA NO.</option>
+
+															</select>
+														</div>
+													</div>
+            </div> -->
+              <div class="col-xl-2 col-md-6 col-8">
+              <div class="mb-1">
+                <label class="form-label" for="basicInput">FROM And TO</label>
+														<div class="position-relative" >
+															<input type="text" name="daterange" value="01/01/2018 - 01/15/2018" style="
+    width: 30rem;
+">
+														
+														</div>
+													</div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+								<div
+									class="d-flex justify-content-between align-items-center mx-0 row">
+									<div class="col-sm-12 col-md-6">
+										<div class="dataTables_length" id="DataTables_Table_0_length">
+											<label>Show <select name="DataTables_Table_0_length"
+												aria-controls="DataTables_Table_0" class="form-select"><option
+														value="7">7</option>
+													<option value="10">10</option>
+													<option value="25">25</option>
+													<option value="50">50</option>
+													<option value="75">75</option>
+													<option value="100">100</option></select> entries
+											</label>
+										</div>
+									</div>
+									<div class="col-sm-12 col-md-6">
+										<div id="DataTables_Table_0_filter" class="dataTables_filter">
+											<label>Search:<input type="search"
+												class="form-control" placeholder=""
+												aria-controls="DataTables_Table_0"></label>
+										</div>
+									</div>
+								</div>
+								<table
+									class="datatables-basic table dataTable no-footer dtr-column"
+									id="DataTables_Table_0" role="grid"
+									aria-describedby="DataTables_Table_0_info"
+									style="width: 1298px;">
+									<thead>
+										<tr role="row">
+											<th class="control sorting_disabled" rowspan="1" colspan="1"
+												style="width: 41px; display: none;" aria-label=""></th>
+											<th
+												class="sorting_disabled dt-checkboxes-cell dt-checkboxes-select-all"
+												rowspan="1" colspan="1" style="width: 41px;" data-col="1"
+												aria-label=""></th>
+											<th class="sorting" tabindex="0"
+												aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+												style="width: 128px;"
+												aria-label="Name: activate to sort column ascending">IWMA
+												NO.</th>
+											<th class="sorting" tabindex="0"
+												aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+												style="width: 132px;"
+												aria-label="Email: activate to sort column ascending">CUSTOMER</th>
+											<th class="sorting" tabindex="0"
+												aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+												style="width: 119px;"
+												aria-label="Date: activate to sort column ascending">Date</th>
+											<th class="sorting" tabindex="0"
+												aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+												style="width: 152px;"
+												aria-label="Salary: activate to sort column ascending">WASTE
+												CATEGORY</th>
+											<th class="sorting" tabindex="0"
+												aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+												style="width: 147px;"
+												aria-label="Status: activate to sort column ascending">WASTE
+												NAME</th>
+											<th class="sorting_disabled" rowspan="1" colspan="1"
+												style="width: 157px;" aria-label="Actions">QTY IN MT</th>
+											<th class="sorting_disabled" rowspan="1" colspan="1"
+												style="width: 157px;" aria-label="Actions">DISPOSAL
+												METHODS</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="odd">
+											<td valign="top" colspan="7" class="dataTables_empty">Loading...</td>
+										</tr>
+									</tbody>
+								</table>
+				<div class="d-flex justify-content-between mx-0 row">
+				<div class="col-sm-12 col-md-6">
+				<div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div>
+				</div>
+				<div class="col-sm-12 col-md-6">
+				<div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
+				<ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous">
+				<a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">&nbsp;</a></li><li class="paginate_button page-item next disabled" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">&nbsp;</a></li></ul></div></div></div></div>
       </div>
     </div>
   </div>
@@ -196,8 +343,6 @@ License: You must have a valid license purchased only from themeforest(the above
     </div>
     <!-- END: Content-->
 
-
-
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
 
@@ -207,7 +352,6 @@ License: You must have a valid license purchased only from themeforest(the above
     </footer>
     <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
     <!-- END: Footer-->
-
 
     <!-- BEGIN: Vendor JS-->
     <script src="/weibridgedata/resources/vendors/js/vendors.min.js"></script>
@@ -224,8 +368,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="/weibridgedata/resources/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
     <script src="/weibridgedata/resources/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
     <script src="/weibridgedata/resources/vendors/js/tables/datatable/responsive.bootstrap5.js"></script>
-    <!-- END: Page Vendor JS-->
- <script src="/weibridgedata/resources/js/materialize-v.1.0.min.js "  ></script>
+    <!-- END: Page Vendor JS-->  
+    <script src="/weibridgedata/resources/js/materialize-v.1.0.min.js "  ></script>
     <script src="/weibridgedata/resources/js/jquery-validation-1.19.1.min.js"  ></script>
     <script src="/weibridgedata/resources/js/jquery.dataTables-v.1.10.min.js"  ></script>
      <script src="/weibridgedata/resources/js/datetime-moment-v1.10.12.js"  ></script>
@@ -247,8 +391,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- BEGIN: Page JS-->
      <script src="/weibridgedata/resources/js/scripts/pages/dashboard-analytics.min.js"></script>
     <script src="/weibridgedata/resources/js/scripts/pages/app-invoice-list.min.js"></script>
-    
-        <script src="/weibridgedata/resources/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="/weibridgedata/resources/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="/weibridgedata/resources/vendors/js/pickers/pickadate/picker.date.js"></script>
     <script src="/weibridgedata/resources/vendors/js/pickers/pickadate/picker.time.js"></script>
     <script src="/weibridgedata/resources/vendors/js/pickers/pickadate/legacy.js"></script>
@@ -291,6 +434,10 @@ License: You must have a valid license purchased only from themeforest(the above
     	    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
     	  });
     	});
+      
+      
+      
+      
       
       
     </script>
